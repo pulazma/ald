@@ -1,0 +1,147 @@
+.site-header{
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255,255,255,.9);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+  height: var(--header-h);
+}
+
+.header-row{
+  height: var(--header-h);
+  display: grid;
+  align-content: center;
+  gap: 8px;
+  padding: 10px 0;
+}
+
+.brand{
+  text-align: center;
+}
+
+.nav__list{
+  justify-content: center;
+}
+
+.hero{
+  min-height: calc(100vh - var(--header-h));
+  display: grid;
+}
+
+.hero--image{
+  background-image: url("../images/hero.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-inner{
+  display: grid;
+  align-content: end;
+  padding: 28px 0 34px;
+}
+
+.hero-copy{
+  max-width: 720px;
+  padding: 18px 18px;
+  background: rgba(255,255,255,.78);
+  border: 1px solid rgba(0,0,0,.10);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.hero-title{
+  margin: 0;
+  font-size: clamp(28px, 4vw, 46px);
+  line-height: 1.1;
+}
+
+.hero-text{
+  margin: 10px 0 0;
+  color: var(--muted);
+}
+
+.hero-actions{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.cards-grid{
+  display: grid;
+  gap: var(--gap);
+}
+
+@media (min-width: 740px){
+  .cards-grid{ grid-template-columns: repeat(3, 1fr); }
+}
+
+.split{
+  display: grid;
+  gap: var(--gap);
+  align-items: start;
+}
+
+@media (min-width: 900px){
+  .split{ grid-template-columns: 1fr 1fr; }
+}
+
+.two-col{
+  display: grid;
+  gap: var(--gap);
+  align-items: start;
+}
+
+@media (min-width: 980px){
+  .two-col{ grid-template-columns: 1.4fr .9fr; }
+}
+
+.catalog{
+  display: grid;
+  gap: var(--gap);
+}
+
+.product{
+  display: grid;
+  gap: 14px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #fff;
+  box-shadow: var(--shadow);
+}
+
+@media (min-width: 900px){
+  .product{
+    grid-template-columns: .95fr 1.05fr;
+    gap: 18px;
+  }
+}
+
+.contact-grid{
+  display: grid;
+  gap: var(--gap);
+}
+
+@media (min-width: 900px){
+  .contact-grid{ grid-template-columns: .85fr 1.15fr; }
+}
+
+.site-footer{
+  border-top: 1px solid var(--line);
+  padding: 22px 0;
+  background: #fff;
+}
+
+.footer-row{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.footer-note{
+  margin: 0;
+  color: var(--muted);
+}
